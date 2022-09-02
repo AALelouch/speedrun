@@ -28,6 +28,5 @@ public class UserRequest {
     @NotBlank(message = "Email can't be empty or null")
     private String email;
 
-    @NotBlank(message = "Roles can't be empty or null")
-    private Set<Role> roles = new HashSet<>();
+    private List<String> roles = new ArrayList<>();
 }

@@ -3,6 +3,7 @@ package com.practice.speedrun.controller;
 import com.practice.speedrun.dto.request.DeviceRequest;
 import com.practice.speedrun.dto.response.DeviceResponse;
 import com.practice.speedrun.service.DeviceService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/device")
+@SecurityRequirement(name = "bearerAuth")
 public class DeviceControllerImpl implements DeviceController{
 
     private DeviceService deviceServiceImpl;

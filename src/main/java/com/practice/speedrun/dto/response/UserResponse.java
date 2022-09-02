@@ -2,6 +2,8 @@ package com.practice.speedrun.dto.response;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class UserResponse {
     private String name;
@@ -10,6 +12,7 @@ public class UserResponse {
     private String password;
     private String email;
 
+    private List<String> roles;
 
 
 }
