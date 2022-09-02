@@ -25,8 +25,6 @@ public class JtwTokenProvider {
         String token = Jwts.builder().setSubject(username).setIssuedAt(new Date())
                 .setExpiration(expiryDate).signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
 
-        System.out.println(token);
-
         return token;
     }
 
