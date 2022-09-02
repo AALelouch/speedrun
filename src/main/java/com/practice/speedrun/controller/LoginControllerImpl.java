@@ -4,15 +4,13 @@ import com.practice.speedrun.dto.request.LoginRequest;
 import com.practice.speedrun.dto.response.JwtAuthResponse;
 import com.practice.speedrun.service.LoginService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/login")
+@CrossOrigin(origins = "*")
 public class LoginControllerImpl implements LoginController{
 
     private LoginService loginServiceImpl;

@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/device")
 @SecurityRequirement(name = "bearerAuth")
+@CrossOrigin(origins = "*")
 public class DeviceControllerImpl implements DeviceController{
 
     private DeviceService deviceServiceImpl;
