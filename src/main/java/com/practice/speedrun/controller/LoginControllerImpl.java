@@ -10,7 +10,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/login")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class LoginControllerImpl implements LoginController{
 
     private LoginService loginServiceImpl;
